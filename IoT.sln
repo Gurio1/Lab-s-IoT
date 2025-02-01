@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT", "IoT\IoT.csproj", "{49B48523-E9CB-47DD-8A05-84DB5FECC2E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MqttBroker", "MqttBroker", "{B9E7A660-3689-4FCD-9F61-5C2B2DC92026}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityModule", "IdentityModule", "{2199C570-465A-4270-BC3B-091FF6D316E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.Identity", "IoT.Identity\IoT.Identity.csproj", "{386F17DC-2DC6-46A8-92D8-919487C34916}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.MqttBroker", "IoT.MqttBroker\IoT.MqttBroker.csproj", "{7A588403-9CC2-4694-ABE2-22CEE54677D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MonitoringModule", "MonitoringModule", "{8E54B938-C26E-43EC-81DF-74138FACBB7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.Monitoring", "IoT.Monitoring\IoT.Monitoring.csproj", "{83B8A5E2-E6CC-4CD0-AE23-FD83E60F455C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.MqttBroker.Contracts", "IoT.MqttBroker.Contracts\IoT.MqttBroker.Contracts.csproj", "{4E11B1A0-C783-4D63-B459-7F2811D69F5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1B0187D-304A-412D-B46E-9E070EECBFAB}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemperatureModule", "TemperatureModule", "{70CD66B1-4E11-4E6B-8E77-6B971B5F92FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.Temperature", "IoT.Temperature\IoT.Temperature.csproj", "{77209795-03E3-4F51-A413-B368024B8FD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49B48523-E9CB-47DD-8A05-84DB5FECC2E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49B48523-E9CB-47DD-8A05-84DB5FECC2E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49B48523-E9CB-47DD-8A05-84DB5FECC2E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49B48523-E9CB-47DD-8A05-84DB5FECC2E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{386F17DC-2DC6-46A8-92D8-919487C34916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{386F17DC-2DC6-46A8-92D8-919487C34916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{386F17DC-2DC6-46A8-92D8-919487C34916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{386F17DC-2DC6-46A8-92D8-919487C34916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A588403-9CC2-4694-ABE2-22CEE54677D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A588403-9CC2-4694-ABE2-22CEE54677D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A588403-9CC2-4694-ABE2-22CEE54677D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A588403-9CC2-4694-ABE2-22CEE54677D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B8A5E2-E6CC-4CD0-AE23-FD83E60F455C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B8A5E2-E6CC-4CD0-AE23-FD83E60F455C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B8A5E2-E6CC-4CD0-AE23-FD83E60F455C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B8A5E2-E6CC-4CD0-AE23-FD83E60F455C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E11B1A0-C783-4D63-B459-7F2811D69F5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E11B1A0-C783-4D63-B459-7F2811D69F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E11B1A0-C783-4D63-B459-7F2811D69F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E11B1A0-C783-4D63-B459-7F2811D69F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77209795-03E3-4F51-A413-B368024B8FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77209795-03E3-4F51-A413-B368024B8FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77209795-03E3-4F51-A413-B368024B8FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77209795-03E3-4F51-A413-B368024B8FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{386F17DC-2DC6-46A8-92D8-919487C34916} = {2199C570-465A-4270-BC3B-091FF6D316E5}
+		{7A588403-9CC2-4694-ABE2-22CEE54677D7} = {B9E7A660-3689-4FCD-9F61-5C2B2DC92026}
+		{83B8A5E2-E6CC-4CD0-AE23-FD83E60F455C} = {8E54B938-C26E-43EC-81DF-74138FACBB7B}
+		{4E11B1A0-C783-4D63-B459-7F2811D69F5C} = {B9E7A660-3689-4FCD-9F61-5C2B2DC92026}
+		{77209795-03E3-4F51-A413-B368024B8FD5} = {70CD66B1-4E11-4E6B-8E77-6B971B5F92FC}
+	EndGlobalSection
+EndGlobal
