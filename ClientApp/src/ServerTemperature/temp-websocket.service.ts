@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
 import { API_URL, JWT_TOKEN } from '../constants';
-import { ServerTemperatureData } from './Models/websocketResponse.model';
+import { ServerTemperatureData } from './dto/websocketResponse';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TempWebsocketService {
   private hubConnection: signalR.HubConnection;
+  private temperatureSubject = new Subject<ServerTemperatureData>();
 
   constructor() {
     this.hubConnection = new signalR.HubConnectionBuilder()
@@ -23,6 +25,7 @@ export class TempWebsocketService {
       .build();
 
     this.startConnection();
+    this.registerTemperatureListener();
   }
 
   private startConnection() {
@@ -42,5 +45,9 @@ export class TempWebsocketService {
         this.temperatureSubject.next(data);
       }
     );
+  }
+
+  public getTemperatureData(): Observable<ServerTemperatureData> {
+    return this.temperatureSubject.asObservable();
   }
 }
