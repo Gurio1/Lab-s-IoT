@@ -1,0 +1,94 @@
+:host {
+  background: url("https://www.transparenttextures.com/patterns/dark-wall.png")
+    repeat;
+  color: #d4af37;
+  font-family: "MedievalSharp", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.container {
+  background: rgba(30, 30, 30, 0.95);
+  border: 3px solid #d4af37;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #d4af37;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #d4af37;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #d4af37;
+  border-radius: 5px;
+  background-color: #333;
+  color: #d4af37;
+  font-family: "MedievalSharp", cursive;
+}
+
+button {
+  background-color: #d4af37;
+  color: #1e1e1e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "MedievalSharp", cursive;
+  font-size: 1.1em;
+}
+
+button:hover {
+  background-color: #b38e27;
+}
+
+.link-container {
+  margin-top: 20px;
+}
+
+.link-container a {
+  color: #d4af37;
+  text-decoration: none;
+  font-family: "MedievalSharp", cursive;
+  font-size: 1.1em;
+}
+
+.link-container a:hover {
+  text-decoration: underline;
+}

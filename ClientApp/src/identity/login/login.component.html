@@ -1,0 +1,56 @@
+<div class="background-overlay"></div>
+<div class="container">
+  <h1>Login Form</h1>
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="$event.preventDefault(); submitForm()"
+  >
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" required />
+      <div
+        *ngIf="
+          loginForm.get('email')?.invalid &&
+          (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="loginForm.get('email')?.hasError('required')"
+        >
+          Email is required
+        </small>
+        <small
+          class="text-danger"
+          *ngIf="loginForm.get('email')?.hasError('email')"
+        >
+          Enter a valid email address
+        </small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        required
+      />
+      <div
+        *ngIf="
+          loginForm.get('password')?.invalid &&
+          (loginForm.get('password')?.dirty ||
+            loginForm.get('password')?.touched)
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="loginForm.get('password')?.hasError('required')"
+        >
+          Password is required<br />
+        </small>
+      </div>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</div>
