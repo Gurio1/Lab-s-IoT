@@ -16,7 +16,7 @@ This project involves two Internet of Things (IoT) systems:
   - Can open the door remotely based on user input.
 - **Authentication**:
   - No registration
-  - Will be used existing system:
+  - The existing systems will be used:
     - Active Directory
     - Google Active Directory(Gmail) P.S Im not sure
 ## Technologies Used
