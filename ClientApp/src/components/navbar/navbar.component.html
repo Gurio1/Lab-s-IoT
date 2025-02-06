@@ -1,0 +1,43 @@
+<div class="sidebar">
+  <nav>
+    <ul>
+      <li>
+        <a class="site-name" routerLink="/" aria-current="page"> Lab's IoT </a>
+      </li>
+      <li>
+        <a
+          class="nav-item"
+          routerLink="/home"
+          routerLinkActive="active"
+          [ngClass]="{ show: showNavbar }"
+        >
+          <i class="fa-solid fa-house me-3"></i>Home
+        </a>
+      </li>
+      <li>
+        <a
+          class="nav-item"
+          routerLink="/temperature"
+          routerLinkActive="active"
+          [ngClass]="{ show: showNavbar }"
+        >
+          <i class="fa-solid fa-temperature-three-quarters me-3"></i>Temperature
+        </a>
+      </li>
+      <li>
+        <a
+          class="nav-item"
+          routerLink="/door"
+          routerLinkActive="active"
+          [ngClass]="{ show: showNavbar }"
+        >
+          <i class="fa-solid fa-door-closed me-3"></i>Door
+        </a>
+      </li>
+    </ul>
+    <button class="toggle-button" (click)="toggleSidebar()">
+      <i class="fa fa-bars" *ngIf="!showNavbar"></i>
+      <i class="fa fa-times" *ngIf="showNavbar"></i>
+    </button>
+  </nav>
+</div>
