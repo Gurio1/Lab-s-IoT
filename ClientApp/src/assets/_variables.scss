@@ -1,0 +1,24 @@
+@use "helpers" as *;
+
+:root {
+  --color-light: #ffffff;
+
+  --color-dark: #141414;
+  --color-dark-10: #1a1a1a;
+  --color-dark-15: #262626;
+  --color-dark-20: #333333;
+  --color-dark-40: #666666;
+
+  --color-gray: #7e7e81;
+
+  --color-accent: #d4af37;
+  --color-accent-dark: #b38e27;
+
+  --font-family-base: "Roboto", sans-serif;
+  --font-family-accent: "Open Sans", sans-serif;
+
+  --container-width: #{rem(1600)};
+  --container-padding-x: #{rem(40)};
+
+  --transition-duration: 0.2s;
+}

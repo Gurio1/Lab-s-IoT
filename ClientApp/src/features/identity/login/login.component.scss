@@ -1,0 +1,68 @@
+@use "../../../assets/helpers" as *;
+
+.container {
+  background: var(--color-dark);
+  border: 3px solid var(--color-accent);
+  padding: rem(20);
+  border-radius: rem(20);
+  box-shadow: 0 0 rem(20) rgba(0, 0, 0, 0.8);
+  max-width: rem(500);
+  text-align: center;
+}
+
+h1 {
+  font-size: rem(45);
+  margin-bottom: rem(20);
+  color: var(--color-accent);
+}
+
+.form-group {
+  margin-bottom: rem(20);
+  text-align: left;
+}
+
+label {
+  margin-bottom: 0.4rem;
+  color: var(--color-accent);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--color-accent);
+  border-radius: rem(10);
+  background-color: #333;
+  color: var(--color-accent);
+}
+
+button {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  padding: rem(10) rem(20);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+button:hover {
+  background-color: var(--color-accent-dark);
+}
+
+.link-container {
+  margin-top: rem(20);
+}
+
+.link-container a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.link-container a:hover {
+  text-decoration: underline;
+}
+
+.text-danger {
+  color: rgba(223, 15, 15, 0.943);
+}

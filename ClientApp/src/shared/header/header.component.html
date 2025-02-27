@@ -1,0 +1,78 @@
+<header class="header">
+  <div class="header__body">
+    <div class="header__body-inner">
+      <a
+        routerLink="/home"
+        routerLinkActive="active"
+        class="header__body-logo"
+        aria-label="Home"
+        title="Home"
+      >
+        <img
+          ngSrc="assets/images/logo.png"
+          alt=""
+          class="logo__image"
+          width="55"
+          height="55"
+          priority
+        />
+      </a>
+      <div class="header__overlay" [ngClass]="{ is_active: showNavbar }">
+        <aside class="header__menu">
+          <ul class="header__menu_list">
+            <li class="header__menu_item">
+              <a
+                routerLink="/home"
+                routerLinkActive="active"
+                class="header__menu_link logo"
+                aria-label="Home"
+                title="Home"
+                (click)="toggleSidebar()"
+              >
+                <img
+                  ngSrc="assets/images/logo.png"
+                  alt=""
+                  class="logo__image"
+                  width="67"
+                  height="75"
+                  priority
+                />
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="header__menu_item">
+              <a
+                routerLink="/temperature"
+                routerLinkActive="active"
+                class="header__menu_link"
+                (click)="toggleSidebar()"
+                ><i class="fa-solid fa-temperature-three-quarters me-3"></i
+                ><span>Temperature</span></a
+              >
+            </li>
+            <li class="header__menu_item">
+              <a
+                routerLink="/door"
+                routerLinkActive="active"
+                class="header__menu_link"
+                (click)="toggleSidebar()"
+                ><i class="fa-solid fa-door-closed me-3"></i
+                ><span>Door</span></a
+              >
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <button
+        class="header__burger-button visible-mobile"
+        [class.active]="showNavbar"
+        aria-label="Open menu"
+        title="Open menu"
+        (click)="toggleSidebar()"
+      >
+        <i class="fa fa-bars" *ngIf="!showNavbar"></i>
+        <i class="fa fa-times" *ngIf="showNavbar"></i>
+      </button>
+    </div>
+  </div>
+</header>

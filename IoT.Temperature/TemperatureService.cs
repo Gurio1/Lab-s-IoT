@@ -25,6 +25,12 @@ public class TemperatureService
     
     public async Task<List<ServerThermometersReport>> GetAsync(TimeSpan  timeOffset) =>
         await _booksCollection.Find(temp => temp.DateTime >= DateTime.Now -timeOffset).ToListAsync();
+    
+    public async Task<List<ServerThermometersReport>> GetLastRecordsAsync(int  count) =>
+         await _booksCollection.Find(FilterDefinition<ServerThermometersReport>.Empty)
+            .Sort(Builders<ServerThermometersReport>.Sort.Descending(r => r.DateTime))
+            .Limit(count)
+            .ToListAsync();
 
     public async Task<ServerThermometersReport?> GetAsync(string id) =>
         await _booksCollection.Find(x => x.Id == id).FirstOrDefaultAsync();

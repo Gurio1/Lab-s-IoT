@@ -1,0 +1,29 @@
+<div *ngIf="healthStatus">
+  <h2>IoT Health Status</h2>
+  <p>
+    Status:
+    <span
+      [ngClass]="{ healthy: isHealthy(), unhealthy: !isHealthy() }"
+      class="status"
+      >{{ healthStatus.status }}</span
+    >
+  </p>
+  <p>Total Duration: {{ healthStatus.totalDuration }}</p>
+
+  <div *ngFor="let key of getDeviceKeys()" class="device-container">
+    <h3 class="device-title">{{ key }}</h3>
+    <div class="device-status">
+      <p>
+        <strong>MQTT Connection:</strong>
+        {{ healthStatus.entries["iot-connections"].data[key].mqttConnection }}
+      </p>
+      <p>
+        <strong>Network Connection:</strong>
+        {{
+          healthStatus.entries["iot-connections"].data[key].networkConnection
+        }}
+      </p>
+    </div>
+  </div>
+</div>
+<p *ngIf="!healthStatus">Loading health status...</p>
